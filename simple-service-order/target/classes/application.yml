@@ -1,0 +1,11 @@
+server:
+  port: 8110
+
+spring:
+  application:
+    name: order
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
