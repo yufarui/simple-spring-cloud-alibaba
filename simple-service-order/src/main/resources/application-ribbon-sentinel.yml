@@ -1,0 +1,4 @@
+#是否开启@SentinelRestTemplate注解
+resttemplate:
+  sentinel:
+    enabled: true
