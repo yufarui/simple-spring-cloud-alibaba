@@ -1,11 +1,5 @@
 server:
-  port: 8210
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+  port: 8112
 
 spring:
   application:
@@ -15,8 +9,3 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-    sentinel:
-      transport:
-        dashboard: localhost:9999
-      filter:
-        enabled: true

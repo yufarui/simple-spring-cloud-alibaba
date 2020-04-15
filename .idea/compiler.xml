@@ -2,19 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="simple-service-stock" />
         <module name="simple-service-order" />
+        <module name="simple-order-gateway" />
         <module name="simple-seata-order" />
         <module name="simple-seata-store" />
+        <module name="simple-service-stock" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="simple-order-gateway" options="-parameters" />
       <module name="simple-seata-order" options="-parameters -parameters" />
       <module name="simple-seata-store" options="-parameters -parameters" />
       <module name="simple-service-order" options="-parameters" />

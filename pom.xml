@@ -13,6 +13,7 @@
         <module>simple-service-stock</module>
         <module>simple-seata-order</module>
         <module>simple-seata-store</module>
+        <module>simple-order-gateway</module>
     </modules>
 
     <parent>
@@ -23,11 +24,6 @@
     </parent>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
