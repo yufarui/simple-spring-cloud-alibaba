@@ -1,0 +1,30 @@
+server:
+  port: 8110
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  application:
+    name: order-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#        namespace: 7049a3d5-44ac-4dad-9e85-3fdc214fb790
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true
+      enabled: true
+
+    sentinel:
+      transport:
+        dashboard: localhost:9999
+
+  main:
+    allow-bean-definition-overriding: true

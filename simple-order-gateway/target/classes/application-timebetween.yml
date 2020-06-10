@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+       - id: my-timeBetween #id必须要唯一
+         uri: lb://order
+         predicates:
+           #当前请求的时间必须在早上7点到 晚上11点
+           #才会被转发
+           - MyTimeBetween=上午7:00,下午11:00

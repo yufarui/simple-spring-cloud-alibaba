@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: stock-center
+          uri: lb://stock
+          predicates:
+            - Path=/product/stock/**
+          filters:
+            - AddRequestHeader=X-Request-Company,yu1
+            - TimeMonitor=enabled,true
+#            - AddRequestParameter=company, yu2
+            - AddResponseHeader=X-Response-Company, yu3
+#            - PrefixPath=/order
